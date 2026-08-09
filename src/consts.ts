@@ -1,21 +1,26 @@
 import type { Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
-  NAME: "Kathe Murcia", // pon tu nombre
+  NAME: "Katherine Murcia",
   EMAIL: "mkmurcia@unbosque.edu.co",
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
-  NUM_PROJECTS_ON_HOMEPAGE: 4,
+  NUM_PROJECTS_ON_HOMEPAGE: 2,
 };
 
 export const HOME: Metadata = {
-  TITLE: "Presentación",
-  DESCRIPTION: "Portafolio de Bases de Datos 2 — SQL, PL/SQL, NoSQL y proyecto final.",
+  TITLE: "Inicio",
+  DESCRIPTION: "Portafolio de Bases de Datos 2 — Katherine Murcia.",
+};
+
+export const ABOUT: Metadata = {
+  TITLE: "Sobre mí",
+  DESCRIPTION: "Un poco sobre mí y presentación.",
 };
 
 export const BLOG: Metadata = {
-  TITLE: "Blog",
-  DESCRIPTION: "Artículos y notas del curso.",
+  TITLE: "Trabajos en clase",
+  DESCRIPTION: "Ejercicios trabajados en cada clase organizados por fecha",
 };
 
 export const WORK: Metadata = {
@@ -24,11 +29,11 @@ export const WORK: Metadata = {
 };
 
 export const PROJECTS: Metadata = {
-  TITLE: "Evidencias",
-  DESCRIPTION: "SQL, PL/SQL Scripts, NoSQL y Proyecto final de Bases de Datos 2.",
+  TITLE: "Proyectos",
+  DESCRIPTION: "Entregas del cursos del semestre.",
 };
 
 export const SOCIALS: Socials = [
-  { NAME: "github", HREF: "https://github.com/tu-usuario" },
-  { NAME: "linkedin", HREF: "https://www.linkedin.com/in/tu-usuario" },
+  { NAME: "github", HREF: "https://github.com/KatherineMurcia" },
+
 ];

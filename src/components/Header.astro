@@ -2,31 +2,31 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+
+const { pathname } = Astro.url;
+const isActive = (path: string) => pathname === path || pathname === path + "/";
 ---
 
 <header>
   <Container>
-    <div class="flex flex-wrap gap-y-2 justify-between">
+    <div class="flex flex-wrap gap-y-2 justify-between items-center py-1">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
+        <div class="font-semibold text-black dark:text-white">
           {SITE.NAME}
         </div>
       </Link>
-      <nav class="flex gap-1">
-        <Link href="/blog">
-          blog
+      <nav class="flex gap-4 text-sm">
+        <Link href="/" underline={false} class={isActive("/") ? "text-black dark:text-white font-semibold" : ""}>
+          inicio
         </Link>
-        <span>
-          {`/`}
-        </span>
-        <Link href="/work">
-          work
+        <Link href="/about" underline={false} class={isActive("/about") ? "text-black dark:text-white font-semibold" : ""}>
+          sobre mí
         </Link>
-        <span>
-          {`/`}
-        </span>
-        <Link href="/projects">
-          projects
+        <Link href="/blog" underline={false} class={isActive("/blog") ? "text-black dark:text-white font-semibold" : ""}>
+          trabajos en clase
+        </Link>
+        <Link href="/projects" underline={false} class={isActive("/projects") ? "text-black dark:text-white font-semibold" : ""}>
+          proyectos
         </Link>
       </nav>
     </div>

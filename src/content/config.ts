@@ -6,6 +6,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    category: z.enum(["SQL", "PL/SQL Scripts", "NoSQL", "Proyecto", "Otro"]).optional(),
     draft: z.boolean().optional()
   }),
 });
