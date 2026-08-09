@@ -1,4 +1,7 @@
 {
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
+  },
   "name": "astro-nano",
   "type": "module",
   "version": "1.0.0",
