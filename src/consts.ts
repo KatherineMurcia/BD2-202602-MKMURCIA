@@ -23,11 +23,6 @@ export const BLOG: Metadata = {
   DESCRIPTION: "Ejercicios trabajados en cada clase organizados por fecha",
 };
 
-export const WORK: Metadata = {
-  TITLE: "Work",
-  DESCRIPTION: "Where I have worked and what I have done.",
-};
-
 export const PROJECTS: Metadata = {
   TITLE: "Proyectos",
   DESCRIPTION: "Entregas del cursos del semestre.",

@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@lib/utils";
 import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
@@ -52,7 +53,7 @@ const tools = [
         <div class="w-full max-w-xs bg-white/10 rounded-3xl p-6 flex flex-col items-center gap-5">
           <div class="w-full aspect-square rounded-2xl overflow-hidden bg-white/5 flex items-center justify-center">
             <img
-              src="/emoji.png"
+               src={withBase("/emoji.png")}
               alt="Ilustración de trabajo con bases de datos"
               class="w-full h-full object-cover"
             />

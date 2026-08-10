@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+import { withBase } from "@lib/utils";
 
 const { pathname } = Astro.url;
 const isActive = (path: string) => pathname === path || pathname === path + "/";
@@ -10,23 +11,23 @@ const isActive = (path: string) => pathname === path || pathname === path + "/";
 <header>
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between items-center py-1">
-      <Link href="/" underline={false}>
+      <Link href={withBase("/")} underline={false}>
         <div class="font-semibold text-black dark:text-white">
           {SITE.NAME}
         </div>
       </Link>
       <nav class="flex gap-4 text-sm">
-        <Link href="/" underline={false} class={isActive("/") ? "text-black dark:text-white font-semibold" : ""}>
-          inicio
+        <Link href={withBase("/")} underline={false} class={isActive("/") ? "text-black dark:text-white font-semibold" : ""}>
+          Inicio
         </Link>
-        <Link href="/about" underline={false} class={isActive("/about") ? "text-black dark:text-white font-semibold" : ""}>
-          sobre mí
+        <Link href={withBase("/about")} underline={false} class={isActive("/about") ? "text-black dark:text-white font-semibold" : ""}>
+          Sobre mí
         </Link>
-        <Link href="/blog" underline={false} class={isActive("/blog") ? "text-black dark:text-white font-semibold" : ""}>
-          trabajos en clase
+        <Link href={withBase("/blog")} underline={false} class={isActive("/blog") ? "text-black dark:text-white font-semibold" : ""}>
+          Trabajos en clase
         </Link>
-        <Link href="/projects" underline={false} class={isActive("/projects") ? "text-black dark:text-white font-semibold" : ""}>
-          proyectos
+        <Link href={withBase("/projects")} underline={false} class={isActive("/projects") ? "text-black dark:text-white font-semibold" : ""}>
+          Proyectos
         </Link>
       </nav>
     </div>

@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@lib/utils";
 import PageLayout from "@layouts/PageLayout.astro";
 import { ABOUT } from "@consts";
 
@@ -17,7 +18,7 @@ const interests = [
   <div class="w-full bg-slate-100 dark:bg-slate-900/60 border-b border-slate-900/10 dark:border-slate-100/10">
     <div class="mx-auto max-w-screen-md px-5 py-16 flex flex-col items-center text-center gap-5 animate">
       <img
-        src="/avatar.jpg"
+        src={withBase("/avatar.jpg")}
         alt="Foto de perfil"
         class="w-32 h-32 rounded-full object-cover object-top border-4 border-white dark:border-slate-900 shadow-sm"
       />
@@ -57,7 +58,7 @@ const interests = [
           Quién soy
         </h2>
         <p>
-          Soy llanera, nací en San Martín - Meta, vivo en Bogotá aproximadamente hace 9 años. Soy estudiante de quinto semestre de Ingeniería de Sistemas. Disfruto el deporte al aire libre y la naturaleza: practico gym, ciclismo de montaña y running, y me encantan los animales.
+          Soy llanera, nací en San Martín - Meta, vivo en Bogotá aproximadamente hace 9 años. Soy estudiante de quinto semestre de Ingeniería de Sistemas. Disfruto el deporte al aire libre.
         </p>
       </section>
 
@@ -70,18 +71,14 @@ const interests = [
         </p>
       </section>
 
-      <blockquote class="animate bg-slate-100 dark:bg-slate-900/60 border-l-4 border-slate-600 dark:border-slate-400 pl-5 py-4 pr-4 rounded-r-lg italic text-black/80 dark:text-white/80">
-        "Soy llanera y me apasiona estudiar. Este semestre quiero demostrarle al profesor que puedo apropiarme de Bases de Datos por mi cuenta, ir más allá de lo visto en clase, y llevar ese conocimiento a un contexto profesional real."
-      </blockquote>
-
-      <section class="animate space-y-3">
+   <section class="animate space-y-3">
         <h2 class="font-semibold text-black dark:text-white uppercase text-sm tracking-wide">
-          Mi presentación
+          Presentación formato video
         </h2>
-        <div class="aspect-video w-full rounded-lg overflow-hidden border border-black/10 dark:border-white/20">
+        <div class="aspect-[9/16] w-full max-w-xs mx-auto md:mx-0 rounded-lg overflow-hidden border border-black/10 dark:border-white/20">
           <iframe
             class="w-full h-full"
-            src="https://www.youtube.com/embed/v7HyyOnixJ8"
+            src="https://www.youtube.com/embed/txFTeorWVyg"
             title="Video de presentación"
             allowfullscreen
           ></iframe>
